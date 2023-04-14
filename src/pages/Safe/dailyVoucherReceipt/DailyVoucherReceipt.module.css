@@ -1,0 +1,32 @@
+.inputsDiv .MuiFormLabel-root {
+    bottom: 40% !important;
+} 
+ .MuiInputBase-root {
+    padding: 0.5em !important;
+}
+.ant-col {
+    margin-top: 0.5em !important;
+}
+select-multiple.ant-select-lg .ant-select-selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1px 4px;
+    border-radius: 5px !important;
+    border-color: lightgray !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+}
+.menu-item .muirtl-6hp17o-MuiList-root-MuiMenu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    outline: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+}

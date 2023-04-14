@@ -1,0 +1,22 @@
+.pp {
+    color: red;
+}
+.img {
+    background-image: url('../../assets/main-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.navImg {
+    background-image: url('../../assets/alhamd-word.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footerLinks{
+    transition: all .8s ;
+}
+.footerLinks:hover {
+    transform: scale(1.2);
+    color: rgb(136, 255, 0) !important;
+}

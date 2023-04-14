@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+* {
+    /* box-sizing: border-box;
+    font-family: "Tajawal", sans-serif;
+    font-size: 18px !important; */
+    /* overflow: hidden; */
+  }
+ :where(.css-dev-only-do-not-override-1n7nwfa).ant-layout .ant-layout-sider {
+    position: relative;
+    min-width: 0;
+    background: #2A2727 !important;
+    transition: all 0.2s;
+}
+
+.ant-menu-dark {
+    color: rgba(255, 255, 255, 0.65);
+    background: #2A2727 !important;
+}
+.sidebar{
+    font-size: 22px !important;
+
+}

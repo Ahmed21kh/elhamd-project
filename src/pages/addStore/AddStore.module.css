@@ -1,0 +1,10 @@
+.inputsDiv .MuiFormLabel-root {
+    bottom: 40% !important;
+} 
+ .MuiInputBase-root {
+    padding: 0.5em !important;
+}
+ .ant-col {
+    margin-top: 0.5em !important;
+    
+}

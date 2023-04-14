@@ -1,0 +1,136 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+  /* overflow: hidden; */
+}
+.loginMain {
+    width: 100%;
+    height: 100vh;
+  
+    display: flex;
+  }
+  .loginMain .loginLogo {
+    height: 100%;
+    width: 50%;
+    background-color: #2A2727;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginMain .loginLogo .loginLogoImgDiv {
+    width: 20vw;
+    height: 26vw;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .loginMain .loginLogo .loginLogoImgDiv .logoDiv {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginMain .loginForm {
+    height: 100%;
+    width: 55%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginMain .loginForm .formWrapperDiv {
+    width: 70%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* box-shadow: 1px 1px 1px -1px gray; */
+    box-shadow: 0 0 9px rgba(139, 138, 138, 0.9);
+  }
+  .loginMain .loginForm .formWrapperDiv h3 {
+    height: 20%;
+  }
+  .loginMain .loginForm .formWrapperDiv .formBody {
+    height: 80%;
+    width: 75%;
+    text-align: right;
+  }
+  .loginMain .loginForm .formWrapperDiv .formBody .formDivs {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .loginMain .loginForm .formWrapperDiv .loginWord  {
+    font-size: 38px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #302f2f;
+  }
+  .loginMain .loginForm .formWrapperDiv .formBody .formDivs .usernameDiv,
+  .loginMain .loginForm .formWrapperDiv .formBody .formDivs .passwordDiv {
+    width: 100%;
+    direction: rtl;
+    position: relative;
+  }
+  .loginMain .loginForm .formWrapperDiv .formBody .formDivs .passwordDiv {
+    margin-top: 1em;
+  }
+  .loginMain .loginForm .formWrapperDiv .formBody .formDivs .loginBtnDiv {
+    margin-top: 2em;
+    width: 100%;
+  }
+  .loginBtnDiv .loginBtn {
+    border: none;
+    background-color: #2A2727;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .userPassPara {
+    font-weight: bold;
+    margin-bottom: 0px;
+    opacity: 0.7;
+  }
+  .usernameDiv .ant-input,
+  .passwordDiv .ant-input-password {
+    border-radius: 10px;
+    padding: 0.25em;
+  }
+  
+  @media all and (max-width: 1000px) {
+
+    .loginMain .loginForm .formWrapperDiv {
+      width: 80%;
+      height: 59%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      /* box-shadow: 1px 1px 1px -1px gray; */
+      box-shadow: 0 0 5px rgb(146, 144, 144);
+    }
+    .loginMain .loginLogo .loginLogoImgDiv {
+      width: 28vw;
+      height: 37vw;
+    }
+    .loginMain .loginLogo .loginLogoImgDiv .logoWord {
+      width: 70%;
+      height: 25%;
+    }
+  }
+  

@@ -1,0 +1,149 @@
+.container{
+    width: 95%;
+    padding:25px 70px;
+    padding-bottom:5%;
+    margin:0 auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: auto !important;
+
+}
+.sale{
+    position: relative;
+    width:100%;
+    padding:10px 10px;
+    height: auto;
+    border: 1px solid #797676;
+    display: grid;
+    /* column-gap: 50px; */
+    grid-template-columns: auto auto auto auto;
+    /* grid-template-rows: auto auto auto auto; */
+    align-items: center;
+    column-gap: 60px;
+    justify-content: space-evenly;
+    background: #FCFCFC;
+    border-radius: 5px;
+    margin-top: 4rem;
+    font-size: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+@media (max-width:1335px){
+    .sale{
+        display: grid;
+        /* column-gap: 50px; */
+        grid-template-columns: auto auto;
+        
+    }
+}
+.bill{
+    position: absolute;
+    border-radius: 18px;
+    background: #2A2727;
+    color: #ffffff;
+    width: 150px;
+    padding:10px  24px;
+    text-align: center;
+    top: -20px;
+    right: 30px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+.editable-cell {
+    position: relative;
+    border-right-color:#000 !important ;
+    text-align: center !important;
+  }
+  
+  .editable-cell-value-wrap {
+    padding: 5px 12px;
+    cursor: pointer;
+  }
+  
+  .editable-row:hover .editable-cell-value-wrap {
+    padding: 4px 11px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+  }
+  thead tr th{
+     color:#ffffff !important;
+    background-color:#2A2727 !important;
+    text-align: center !important;
+}
+table th  {
+    border-color: #000 !important;
+}
+.ant-table{
+    color: #000 !important;
+    text-align: center !important;
+}
+ .ant-table-bordered{
+    border-color: #000 !important;
+}
+.ant-table-tbody{
+    text-align: center !important;
+    border-color: #000;
+}
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-table-wrapper .ant-table-pagination {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    row-gap: 8px;
+    direction: ltr !important;
+}
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-table-wrapper .ant-table-pagination.ant-pagination {
+    margin: 16px 0;
+    direction: ltr !important;
+}
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-table-wrapper .ant-table.ant-table-bordered >.ant-table-container >.ant-table-content >table >tbody>tr>td{
+    border-right: 1px solid #000 !important;
+    box-shadow: 0px 3px 8px #d7d4d4;
+}
+.ant-table-cell{
+    border-right-color: #000 !important;
+    text-align: center !important;
+}
+.editable-row{
+    margin-top: 20px;
+}
+.editable-row td {
+    /* border: 1px solid #000; */
+    border-right-color: #000 !important;
+  }
+  .saleCalc{
+    position: relative;
+    width:80%;
+    padding:10px 10px;
+    height: auto;
+    border: 1px solid #797676;
+    display: grid;
+    /* column-gap: 50px; */
+    grid-template-columns: auto auto auto ;
+    /* grid-template-rows: auto auto auto auto; */
+    align-items: center;
+    column-gap: 20px;
+    justify-content: space-evenly;
+    background: #FCFCFC;
+    border-radius: 5px;
+    margin-top: 4rem;
+    font-size: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  @media (max-width:1335px){
+    .saleCalc{
+        display: grid;
+        /* column-gap: 50px; */
+        grid-template-columns: auto auto;
+        
+    }
+}
+.ant-table-summary{
+    font-size: 18px;
+}

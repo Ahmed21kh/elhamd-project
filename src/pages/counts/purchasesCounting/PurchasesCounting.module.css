@@ -1,0 +1,7 @@
+.inputSearch:focus {
+    outline: none !important;
+    }
+    
+    .tableDiv  table{
+    border-top: 1px solid black !important;
+    }
