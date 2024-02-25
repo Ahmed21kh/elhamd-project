@@ -238,7 +238,8 @@ export const ResetPassword = ( props) => {
                       value={code}
                       onChange={handleChange}
                       numInputs={4}
-                      separator={<span style={{ width: "8px" }}></span>}
+                      renderSeparator={<span style={{ width: "8px" }}></span>}
+                      renderInput={(props) => <input {...props} />}
                       isInputNum={true}
                       shouldAutoFocus={true}
                       className={styles.otpInput}
