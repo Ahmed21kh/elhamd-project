@@ -11,7 +11,9 @@ import Background from "../../assets/alhamd-word.png";
 
 const { Header, Content, Footer } = Layout;
 
-export const Main = () => {
+export const Main = ({logout}) => {
+// const {logout} = props;
+// console.log(props);
   const items = [
     {
       label: " مشتريات و مبيعات",
@@ -260,6 +262,9 @@ export const Main = () => {
               right: "20%",
             }}
           />
+          <div  style={{display:'flex',width:'100%',justifyContent:'end'}}>
+          <button onClick={logout}  style={{background:'#000',color:"#fff",cursor:'pointer',border:'none'}}>تسجيل خروج</button>
+          </div>
         </Header>
       </div>
       <div>
@@ -306,7 +311,7 @@ export const Main = () => {
                   bordered={false}
                   style={{
                     width: "20%",
-                    boxShadow: "1px 1px 5px 1px rgba(0, 0, 0, 0.2)"
+                    boxShadow: "none"
                   }}
                 >
                   <p style={{padding:"0.5em 1em"}}> نعم</p>
@@ -319,7 +324,7 @@ export const Main = () => {
                   bordered={false}
                   style={{
                     width: "20%",
-                    boxShadow: "1px 1px 5px 1px rgba(0, 0, 0, 0.2)"
+                    boxShadow: "none"
                   }}
                 >
                   <p style={{padding:"0.5em 1em"}}> 5</p>
@@ -347,7 +352,7 @@ export const Main = () => {
                   bordered={false}
                   style={{
                     width: "20%",
-                    boxShadow: "1px 1px 5px 1px rgba(0, 0, 0, 0.2)"
+                    boxShadow: "none"
                   }}
                 >
                   <p style={{padding:"0.5em 1em"}}>
@@ -365,7 +370,7 @@ export const Main = () => {
                   bordered={false}
                   style={{
                     width: "20%",
-                    boxShadow: "1px 1px 5px 1px rgba(0, 0, 0, 0.2)"
+                    boxShadow: "none"
                   }}
                 >
                   <p style={{padding:"0.5em 1em"}}>
@@ -402,7 +407,7 @@ export const Main = () => {
                   bordered={false}
                   style={{
                     width: "30%",
-                    boxShadow: "1px 1px 5px 1px rgba(0, 0, 0, 0.2)"
+                    boxShadow: "none"
                   }}
                 >
                   
@@ -425,7 +430,7 @@ export const Main = () => {
                   bordered={false}
                   style={{
                     width: "30%",
-                    boxShadow: "1px 1px 5px 1px rgba(0, 0, 0, 0.2)"
+                    boxShadow: "none"
                   }}
                 >
                   
@@ -447,7 +452,7 @@ export const Main = () => {
                   bordered={false}
                   style={{
                     width: "30%",
-                    boxShadow: "1px 1px 5px 1px rgba(0, 0, 0, 0.2)"
+                    boxShadow: "none"
                   }}
                 >
                   

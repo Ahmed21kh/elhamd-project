@@ -128,15 +128,17 @@
   margin: 19px;
 
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-layout .ant-layout-sider {
-  position: relative;
-  min-width: 0;
-  background: #2A2727;
-  transition: all 0.2s;
-
+.ant-layout .ant-layout-sider {
+  position: relative !important;
+  background: #2A2727 !important;
+  transition: all 0.2s !important;
+  -webkit-transition: all 0.2s !important;
+  -moz-transition: all 0.2s !important;
+  -ms-transition: all 0.2s !important;
+  -o-transition: all 0.2s !important;
 }
 .ant-menu-dark {
-  color: rgba(255, 255, 255);
+  color: rgba(255, 255, 255) ;
   background: #2A2727;
   font-size: 17px;
 }

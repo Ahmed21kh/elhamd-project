@@ -39,22 +39,11 @@ export const Login = (props) => {
   const Password = useRef(null);
  
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, control } = useForm();
   const onSubmit = (data) => {
     // {()=>{userName && pass !==''?props.login:null}}
-    if(userName == ""){
-      setUserNameerror(true)
-      message.error("يجب ادخال اسم المستخدم")
-    }else{
-      setUserNameerror(false)
-    }
-    if(pass == ""){
-      setPasserror(true)
-      message.error("يجب ادخال كلمة السر ")
-      
-    }else{
-      setPasserror(false)
-    }
+    localStorage.setItem('userData',JSON.stringify(data))
+    props.login()
   }
   // console.log(errors);
 
@@ -103,7 +92,6 @@ export const Login = (props) => {
                       <div className={styles.usernameDiv} dir="rtl">
                         <TextField
                           dir="rtl"
-                          
                           type="text"
                           required
                           id="outlined"
@@ -111,18 +99,19 @@ export const Login = (props) => {
                           variant="outlined"
                           placeholder="اسم المستخدم"
                           fullWidth
-                          // {...register("exampleRequired", { required: true })}
-                          error={UserNameerror}
-                          ref={Username}
-                          onChange={(e) => {
-                            setUserName(e.target.value)
-                            if(Username==''){
-                              setUserNameerror(true)
-                            }else{
-                              setUserNameerror(false)
-                            }
-                                }}
-                          value={userName}
+                          {...register("user_name", { required:true })}
+                          error={errors.user_name}
+                          
+                          // ref={Username}
+                          // onChange={(e) => {
+                          //   setUserName(e.target.value)
+                          //   if(Username==''){
+                          //     setUserNameerror(true)
+                          //   }else{
+                          //     setUserNameerror(false)
+                          //   }
+                          //       }}
+                          // value={userName}
                           size="small"
                           margin="dense"
                           sx={{
@@ -159,7 +148,7 @@ export const Login = (props) => {
                             },
                           }}
                         />
-                        {/* {errors.exampleRequired && <span>This field is required</span>} */}
+                        {errors.user_name && <span style={{color:'red'}}>اسم المستخدم مطلوب</span>}
                        {/* {UserNameerror? <span style={{color:'red',position:"relative",fontSize:12}} >اسم المستخدم مطلوب !!</span> :null} */}
 
                       </div>
@@ -172,20 +161,21 @@ export const Login = (props) => {
                             placeholder="كلمة السر"
                             fullWidth
                             size="small"
+                          {...register("password", { required:true })}
                             
                             type={showPassword ? "text" : "password"}
-                           error={Passerror}
+                           error={errors.password}
                             variant="outlined"
                             margin="dense"
-                            onChange={(e) => {
-                              setPass(e.target.value)
-                              if( pass=='' ){
-                                setPasserror(true)
-                              }else{
-                                setPasserror(false)
-                              }
-                            }}
-                            value={pass}
+                            // onChange={(e) => {
+                            //   setPass(e.target.value)
+                            //   if( pass=='' ){
+                            //     setPasserror(true)
+                            //   }else{
+                            //     setPasserror(false)
+                            //   }
+                            // }}
+                            // value={pass}
                             sx={{
                               "& .muirtl-1sumxir-MuiFormLabel-root-MuiInputLabel-root ":
                                 {
@@ -233,6 +223,8 @@ export const Login = (props) => {
                             {showPassword ? <VisibilityOff /> : <Visibility />}
                           </IconButton>
                         </div>
+                        {errors.password && <span style={{color:'red'}}> كلمة السر مطلوبة</span>}
+
                       </div>
                       <div className={styles.loginBtnDiv}>
                         <Button
@@ -240,7 +232,7 @@ export const Login = (props) => {
                           className={styles.loginBtn}
                           block          
                           type="submit"
-                          onClick={Username && pass == ''? handleSubmit(onSubmit): props.login}
+                          onClick={handleSubmit(onSubmit)}
                         >
                           تسجيل الدخول
                         </Button>
@@ -250,6 +242,7 @@ export const Login = (props) => {
                 </CacheProvider>
               </Box>
               <div style={{ marginTop: "15px" }}>
+                <span style={{marginInlineStart:10}}>هل نسيت كلمة السر ؟</span>
                 <Button
                   onClick={props.handleResetPassword}
                   style={{
@@ -259,8 +252,9 @@ export const Login = (props) => {
                   }}
                   type="link"
                   size="small"
+                  
                 >
-                  نسيت الباسورد ؟
+                    انشاء كلمة سر جديدة
                 </Button>
               </div>
               
