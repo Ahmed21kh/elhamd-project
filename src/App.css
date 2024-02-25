@@ -145,23 +145,23 @@
 .ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline {
   background: #2A2727;
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark.ant-menu-inline .ant-menu-item {
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark.ant-menu-inline .ant-menu-item , :where(.css-1n7nwfa).ant-menu-dark.ant-menu-inline .ant-menu-item {
   position: relative;
   font-size: 17px;
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu .ant-menu-submenu, :where(.css-dev-only-do-not-override-1n7nwfa).ant-menu .ant-menu-submenu-inline{
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu .ant-menu-submenu, :where(.css-dev-only-do-not-override-1n7nwfa).ant-menu .ant-menu-submenu-inline ,:where(.css-1n7nwfa).ant-menu .ant-menu-submenu, :where(.css-1n7nwfa).ant-menu .ant-menu-submenu-inline {
   font-size: '20px !important';
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark .ant-menu-item-selected {
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark .ant-menu-item-selected, :where(.css-1n7nwfa).ant-menu-dark .ant-menu-item-selected{
   background-color: #4e4e4e;
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark.ant-menu-submenu>.ant-menu {
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark.ant-menu-submenu>.ant-menu , :where(.css-1n7nwfa).ant-menu-dark.ant-menu-submenu>.ant-menu {
   background-color: #2A2727;
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu .ant-menu-item .ant-menu-item-icon{
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu .ant-menu-item .ant-menu-item-icon , :where(.css-1n7nwfa).ant-menu .ant-menu-item .ant-menu-item-icon{
   font-size: 22px;
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu .ant-menu-submenu-title .ant-menu-item-icon{
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu .ant-menu-submenu-title .ant-menu-item-icon , :where(.css-1n7nwfa).ant-menu .ant-menu-submenu-title .ant-menu-item-icon{
   font-size: 22px;
 
 }
@@ -220,17 +220,21 @@ border-color: #000;
   /* .ant-layout-sider .ant-layout.css-dev-only-do-not-override-1n7nwfa {
     position: absolute  ;
   } */
-  :where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active {
+  :where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,:where(.css-1n7nwfa).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active {
     background-color: #4e4e4e !important;
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-inline.ant-menu-root .ant-menu-item >.ant-menu-title-content
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-inline.ant-menu-root .ant-menu-item >.ant-menu-title-content,
+:where(.css-1n7nwfa).ant-menu-inline.ant-menu-root .ant-menu-item >.ant-menu-title-content
 {
   flex: auto;
   min-width: 0;
   overflow:initial;
   text-overflow: ellipsis;
 }
-:where(.css-dev-only-do-not-override-1n7nwfa).ant-select-multiple.ant-select-lg .ant-select-selector {
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-select-multiple.ant-select-lg .ant-select-selector ,
+:where(.css-1n7nwfa).ant-select-multiple.ant-select-lg .ant-select-selector 
+
+{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
