@@ -70,13 +70,13 @@ function App() {
     navigate("/login");
   };
   const handleLogin = () => {
-    setIsLogined(true);
+    // setIsLogined(true);
     localStorage.setItem(
       "token",
       "#435345534&cbvcnvnbvf5nvnvdfs6rvsvd5fghdcdrt"
     );
     setTimeout(() => {
-      navigate("/home");
+      navigate("/");
       message.success("تم تسجيل الدخول بنجاح");
     }, 100);
   };
@@ -102,7 +102,7 @@ function App() {
     // );
 
     <>
-      {token == null || localStorage.getItem("token") == null ? (
+      {localStorage.getItem("token") === null ? (
         <Routes>
           <Route
             path="/login"
@@ -134,7 +134,7 @@ function App() {
             overflow: "hidden",
           }}
         >
-          {location !== "/home" && location !== "/" && token ? <Sidebar /> : null}
+          {location !== "/home" && location !== "/" && localStorage.getItem('token') ? <Sidebar /> : null}
 
           <Layout
             style={{

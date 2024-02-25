@@ -8,8 +8,9 @@ import { BsFillCalculatorFill ,BsFillSafeFill} from 'react-icons/bs';
 import { GiEnergyTank} from 'react-icons/gi';
 import { MdBusinessCenter} from 'react-icons/md';
 import { FaChartPie} from 'react-icons/fa';
-import { useNavigate,useHref } from "react-router-dom";
+import { useNavigate,useHref, Link } from "react-router-dom";
 import { replace } from 'stylis';
+import { Logout } from '@mui/icons-material';
 
 const { Sider } = Layout;
 function getItem(label, key, icon, children , path) {
@@ -121,7 +122,15 @@ export const Sidebar=()=> {
             defaultSelectedKeys={location}
             items={items} 
             onClick={({key})=>navigate(key)}
-            />
+            >
+           <Menu.Item icon={ <Logout/>} >
+            <Link style={{display:'flex',alignItems:'center'}}>
+            
+             <span>تسجيل الخروج</span> 
+            </Link>
+           </Menu.Item>
+
+            </Menu>
            
         </Sider>
         
