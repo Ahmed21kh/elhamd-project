@@ -312,3 +312,7 @@ border-color: #000;
 :where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:active , :where(.css-1n7nwfa).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:active {
   background-color: #4e4e4e !important;
 }
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-btn-default:not(:disabled):hover ,:where(.css-1n7nwfa).ant-btn-default:not(:disabled):hover  {
+  color: #fff;
+  border-color: #fff;
+}

@@ -263,7 +263,7 @@ export const Main = ({logout}) => {
             }}
           />
           <div  style={{display:'flex',width:'100%',justifyContent:'end'}}>
-          <button onClick={logout}  style={{background:'#000',color:"#fff",cursor:'pointer',border:'none'}}>تسجيل خروج</button>
+          <button onClick={logout}  style={{background:'#000',color:"#fff",cursor:'pointer',border:'none'}}>تسجيل الخروج</button>
           </div>
         </Header>
       </div>

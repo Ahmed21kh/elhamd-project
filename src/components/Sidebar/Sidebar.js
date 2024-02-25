@@ -1,7 +1,7 @@
 import style from './Sidebar.module.css';
 import {HomeFilled ,ArrowDownOutlined,FileAddFilled} from '@ant-design/icons';
-import { Image, Layout, Menu } from 'antd';
-import React ,{useState} from 'react';
+import { Image, Layout, Menu, Tooltip } from 'antd';
+import React ,{useEffect, useState} from 'react';
 import logo from '../../assets/Group 935.png';
 import GroupIcon from '@mui/icons-material/Group'
 import { BsFillCalculatorFill ,BsFillSafeFill} from 'react-icons/bs';
@@ -66,12 +66,23 @@ function getItem(label, key, icon, children , path) {
     getItem('سند قبض يومي', '/daily-catchReceipt'),
   ]),
   getItem('تقارير', '25', <FaChartPie />),
+  // getItem('تسجيل خروج', '30', <Logout />),
 ];
 const rootSubmenuKeys = ['sub1', 'sub2', 'sub3', 'sub4', 'sub5', 'sub6', 'sub7'];
-export const Sidebar=()=> {
+export const Sidebar=({logout})=> {
+
  console.log(items);
   const navigate = useNavigate();
   const [openKeys, setOpenKeys] = useState([]);
+  const [width, setWidth] = useState(window.innerWidth);
+  const handleResize = () =>  {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
   const onOpenChange = (keys) => {
     const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
     if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
@@ -90,7 +101,6 @@ export const Sidebar=()=> {
   }
   return (
     <>
-
         <Sider
          className={style.sidebar}
          style={{
@@ -122,15 +132,17 @@ export const Sidebar=()=> {
             defaultSelectedKeys={location}
             items={items} 
             onClick={({key})=>navigate(key)}
-            >
-           <Menu.Item icon={ <Logout/>} >
-            <Link style={{display:'flex',alignItems:'center'}}>
-            
-             <span>تسجيل الخروج</span> 
-            </Link>
-           </Menu.Item>
+            />
+           <Tooltip title={width < 992&&'تسجيل الخروج'} placement='left'  destroyTooltipOnHide>
+           <li  style={{display:'flex',gap:10,marginInlineStart:width>992&&16,marginTop:13,cursor:'pointer',justifyContent:width<992&&'center',transition:'all',animationDuration:'2s',animationTimeline:'initial'}} onClick={logout}>
 
-            </Menu>
+             <Logout style={{color:'#fff'}}/>
+             {width > 992 &&<span style={{color:"#fff",fontSize:16,whiteSpace:'nowrap',textOverflow:'ellipsis',overflow:'hidden'}}>تسجيل الخروج</span>} 
+           </li>
+
+           </Tooltip>
+           
+            
            
         </Sider>
         

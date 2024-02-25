@@ -134,7 +134,7 @@ function App() {
             overflow: "hidden",
           }}
         >
-          {location !== "/home" && location !== "/" && localStorage.getItem('token') ? <Sidebar /> : null}
+          {location !== "/home" && location !== "/" && localStorage.getItem('token') ? <Sidebar logout={handleLogout} /> : null}
 
           <Layout
             style={{
