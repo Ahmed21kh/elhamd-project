@@ -231,7 +231,7 @@ export const Login = (props) => {
                           size="large"
                           className={styles.loginBtn}
                           block          
-                          type="submit"
+                          htmlType="submit"
                           onClick={handleSubmit(onSubmit)}
                         >
                           تسجيل الدخول

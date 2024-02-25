@@ -308,3 +308,7 @@ border-color: #000;
   border-radius: 4px;
   padding-left: 14px;
 }
+
+:where(.css-dev-only-do-not-override-1n7nwfa).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:active , :where(.css-1n7nwfa).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-submenu-title:active {
+  background-color: #4e4e4e !important;
+}
